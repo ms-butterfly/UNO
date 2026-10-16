@@ -7,7 +7,6 @@
     <title>Карткова гра UNO</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-
         .layout {
             display: flex;
         }
@@ -21,12 +20,24 @@
             margin-left: 120px;
         }
 
-        /* Невелике помірне накладання підзаголовка на заголовок */
+        /* Контейнер для заголовка та підзаголовка */
+        .place {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        /* Заголовок має вищий z-index, щоб перекривати підзаголовок */
+        .place .sio {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Підзаголовок підіймається вгору і має нижчий z-index, заходячи під заголовок */
         .place .hero-subtitle {
             position: relative;
-            top: -15px;
+            top: -25px; 
             margin-bottom: -10px;
-            z-index: 10;
+            z-index: 1;
         }
     </style>
 </head>

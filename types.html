@@ -5,6 +5,22 @@
     <meta charset="UTF-8">
     <title>UNO - Види</title>
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Робимо однакову фіксовану висоту для всіх стандартних рядків таблиці */
+        .filling table tbody tr {
+            height: 120px;
+        }
+
+        /* Вирівнюємо вміст комірок по центру по вертикалі */
+        .filling table td {
+            vertical-align: middle;
+        }
+
+        /* НАВМИСНА ПОМИЛКА: робимо один рядок (UNO Flip) значно вищим за інші */
+        .filling table tbody tr:nth-child(3) {
+            height: 240px !important;
+        }
+    </style>
 </head>
 
 <body>    
@@ -61,7 +77,7 @@
                     </tr>
                     <tr>
                         <td>UNO Flip</td>
-                        <!-- Навмисна помилка: маленька картинка -->
+                        <!-- Маленька картинка для візуальної помилки -->
                         <td><img src="images/flip" alt="UNO Flip" width="30" height="30"></td>
                         <td>Двостороння колода: світла та темна сторони. Перемикання через карту Flip. Темна сторона – жорсткіші покарання.</td>
                     </tr>

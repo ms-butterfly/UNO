@@ -1,0 +1,122 @@
+body{
+margin:0;
+font-family:Arial;
+}
+
+.place {
+border-top: 2px solid gray;
+border-bottom: 2px solid gray ;
+text-align: center;
+}
+
+.layout{
+display:flex;
+}
+
+.left, .right {
+width: 15%;
+background-repeat: repeat-y;
+background-size: 100%;
+}
+
+.left {
+background-image: url("../images/uno-title(left).jpg");
+}
+
+.right {
+background-image: url("../images/uno-title(right).jpg");
+}
+
+.content{
+width:70%;
+}
+
+.filling {
+margin: 20px;
+}
+
+.menu {
+list-style:none;
+display:flex;
+justify-content:space-evenly;
+flex-wrap: wrap;
+padding:0;
+margin: 0; 
+border-bottom: 2px solid gray ;
+}
+
+.menu a{
+display:block;
+padding:10px 20px;
+color:white;
+text-decoration:none;
+border-radius:6px;
+margin: 20px 0 20px 0;
+border-bottom: 2px solid rgb(6, 6, 6);
+}
+
+.red{
+background:#e53935;
+}
+
+.yellow{
+background:#fdd835;
+}
+
+.green{
+background:#43a047;
+}
+
+.blue{
+background:#1e88e5;
+}
+
+
+.menu a:hover{
+opacity:0.8;
+text-decoration:underline;
+}
+
+.menu a:active{
+transform:scale(0.95);
+}
+
+.title {
+text-align: center;
+}
+
+.picture img {
+display: block; 
+margin-left: auto; 
+margin-right: auto;
+width: 100%;
+max-width: 500px;
+height: auto;
+}
+
+video {
+display: block;
+margin: 20px auto;
+width: 100%;
+max-width: 1000px;
+height: auto;
+}
+
+table, th, td  {
+border: 1px solid black;
+border-collapse: collapse;
+}
+
+.questions-columns {
+display: flex;
+}
+
+.questions-columns .column {
+flex: 1;
+margin: 0px 10px 10px 10px;
+}
+
+.button {
+display: block;
+margin: 20px auto;
+}

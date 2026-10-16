@@ -7,6 +7,7 @@
     <title>Карткова гра UNO</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
+
         .layout {
             display: flex;
         }
@@ -20,30 +21,12 @@
             margin-left: 120px;
         }
 
-        .place {
-            position: relative;
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 50px;
-        }
-
-        .place .sio {
-            position: relative !important;
-            z-index: 2 !important;
-            margin: 0 !important;
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #1e293b;
-        }
-
+        /* Накладання підзаголовка на заголовок */
         .place .hero-subtitle {
-            position: relative !important;
-            z-index: 1 !important;
-            margin-top: -75px !important;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #e11d48;
-            opacity: 0.85;
+            position: relative;
+            top: -28px;
+            margin-bottom: -10px;
+            z-index: 10;
         }
     </style>
 </head>
@@ -54,7 +37,7 @@
     <img src="images/uno.png" alt="UNO" width="100%"/>
 </div>
 
-<div class="place">
+ <div class="place">
     <h1 class="sio">Поринь у світ UNO разом з нами</h1>
     <p class="hero-subtitle">Ознайомтесь з історією, правилами та стратегіями гри!</p>
 </div>
@@ -74,6 +57,7 @@
     <li><a class="yellow" href="strategies.html">Стратегії</a></li>
     <li><a class="green" href="quiz.html">Тест</a></li>
 </ul>
+
 
 <h2 class="title">Про гру UNO</h2>
 

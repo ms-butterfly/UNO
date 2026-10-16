@@ -6,30 +6,26 @@
     <title>UNO - Види</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        /* Фіксуємо таблицю, щоб висота і ширина комірок слухалися команд */
+        /* Робимо таблицю фіксованою, щоб висота працювала */
         .filling table {
             table-layout: fixed;
-            height: 100%;
+            width: 100%;
         }
 
-        /* Задаємо жорстку фіксовану висоту для кожного рядка */
-        .filling table tbody tr {
-            height: 100px !important;
-            max-height: 100px !important;
-        }
-
-        /* Задаємо фіксовану висоту для комірок і вирівнюємо текст */
+        /* Задаємо однакову велику висоту для всіх рядків і комірок у тілі таблиці (окрім thead) */
+        .filling table tbody tr,
         .filling table tbody td {
-            height: 100px !important;
+            height: 220px !important;
+            max-height: 220px !important;
             vertical-align: middle;
             overflow: hidden;
         }
 
-        /* НАВМИСНА ПОМИЛКА: робимо третій рядок (UNO Flip) іншої висоти навмисне */
-        .filling table tbody tr:nth-child(3),
-        .filling table tbody tr:nth-child(3) td {
-            height: 220px !important;
-            max-height: 220px !important;
+        /* Фіксуємо розмір картинок, щоб вони не розтягували рядок */
+        .filling table tbody img {
+            max-height: 150px;
+            width: auto;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -88,8 +84,7 @@
                     </tr>
                     <tr>
                         <td>UNO Flip</td>
-                        <!-- Маленька картинка для візуальної помилки -->
-                        <td><img src="images/flip" alt="UNO Flip" width="30" height="30"></td>
+                        <td><img src="images/flip" alt="UNO Flip" width="200" height="200"></td>
                         <td>Двостороння колода: світла та темна сторони. Перемикання через карту Flip. Темна сторона – жорсткіші покарання.</td>
                     </tr>
                     <tr>

@@ -6,22 +6,10 @@
     <title>UNO - Види</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        /* Фіксуємо розміри картинок у таблиці, щоб вони не впливали на висоту */
-        .filling table tbody img {
-            width: 80px !important;
-            height: 80px !important;
-            object-fit: contain;
-        }
-
-        /* Усім рядкам тіла таблиці задаємо однакову висоту */
-        .filling table tbody tr {
-            height: 100px;
-        }
-
-        /* Навмисна помилка: робимо третій рядок (UNO Flip) іншої висоти */
-        .filling table tbody tr:nth-child(3) {
-            height: 220px !important;
-            background-color: #fff8f8; /* легкий акцент на «помилку» */
+        /* Навмисна помилка: робимо картинку в третьому рядку (UNO Flip) надто маленькою */
+        .filling table tbody tr:nth-child(3) img {
+            width: 30px !important;
+            height: 30px !important;
         }
     </style>
 </head>

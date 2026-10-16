@@ -6,19 +6,30 @@
     <title>UNO - Види</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        /* Робимо однакову фіксовану висоту для всіх стандартних рядків таблиці */
+        /* Фіксуємо таблицю, щоб висота і ширина комірок слухалися команд */
+        .filling table {
+            table-layout: fixed;
+            height: 100%;
+        }
+
+        /* Задаємо жорстку фіксовану висоту для кожного рядка */
         .filling table tbody tr {
-            height: 120px;
+            height: 100px !important;
+            max-height: 100px !important;
         }
 
-        /* Вирівнюємо вміст комірок по центру по вертикалі */
-        .filling table td {
+        /* Задаємо фіксовану висоту для комірок і вирівнюємо текст */
+        .filling table tbody td {
+            height: 100px !important;
             vertical-align: middle;
+            overflow: hidden;
         }
 
-        /* НАВМИСНА ПОМИЛКА: робимо один рядок (UNO Flip) значно вищим за інші */
-        .filling table tbody tr:nth-child(3) {
-            height: 240px !important;
+        /* НАВМИСНА ПОМИЛКА: робимо третій рядок (UNO Flip) іншої висоти навмисне */
+        .filling table tbody tr:nth-child(3),
+        .filling table tbody tr:nth-child(3) td {
+            height: 220px !important;
+            max-height: 220px !important;
         }
     </style>
 </head>

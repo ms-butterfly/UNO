@@ -6,13 +6,28 @@
     <title>UNO - Види</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        /* Задаємо однакову висоту для більшості рядків таблиць */
-        table tr {
-            height: 120px;
+        /* Фіксуємо таблицю */
+        table {
+            table-layout: fixed;
+            width: 100%;
         }
-        /* Навмисна помилка: робимо третій рядок значно вищим за інші */
+        
+        /* Робимо так, щоб усі картинки не впливали на висоту і були однакового розміру */
+        table tbody tr td img {
+            height: 80px !important;
+            width: auto !important;
+            object-fit: contain;
+        }
+
+        
+        table tbody tr {
+            height: 100px !important;
+        }
         table tbody tr:nth-child(3) {
-            height: 220px;
+            height: 250px !important;
+        }
+        table tbody tr:nth-child(3) img {
+            height: 220px !important;
         }
     </style>
 </head>

@@ -6,38 +6,20 @@
     <title>UNO - Види</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        /* Фіксуємо таблицю */
-        .filling table {
-            table-layout: fixed;
-            width: 100%;
-        }
-
         /* Задаємо однакову велику висоту за замовчуванням для всіх рядків тіла таблиці */
         .filling table tbody tr {
-            height: 200px !important;
+            height: 200px;
         }
         
         .filling table tbody td {
-            height: 200px !important;
+            height: 200px;
             vertical-align: middle;
-            overflow: hidden;
         }
 
-        /* Обмежуємо картинки, щоб вони не ламали загальну висоту */
-        .filling table tbody td img {
-            max-height: 140px !important;
-            width: auto;
-            object-fit: contain;
-        }
-
-        /* НАВМИСНА ПОМИЛКА: робимо четвертий рядок (UNO Attack) навмисно меншим по висоті */
+        /* НАВМИСНА ПОМИЛКА: зменшуємо висоту тільки четвертого рядка (UNO Attack) */
         .filling table tbody tr:nth-child(4),
         .filling table tbody tr:nth-child(4) td {
             height: 70px !important;
-        }
-        /* Коригуємо картинку в цьому рядку, щоб вона також була меншою */
-        .filling table tbody tr:nth-child(4) img {
-            max-height: 50px !important;
         }
     </style>
 </head>

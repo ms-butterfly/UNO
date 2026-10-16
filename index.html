@@ -20,24 +20,29 @@
             margin-left: 120px;
         }
 
-        /* Контейнер для заголовка та підзаголовка */
+        /* КОНТЕЙНЕР ДЛЯ НАКЛАДАННЯ */
         .place {
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
-        /* Заголовок має вищий z-index, щоб перекривати підзаголовок */
+        /* ЗАГОЛОВОК */
         .place .sio {
-            position: relative;
-            z-index: 2;
+            position: relative !important;
+            z-index: 2 !important; /* Переконуємося, що заголовок зверху */
+            margin: 0 !important;   /* Скидаємо стандартні відступи */
+            font-size: 2.5rem;
         }
 
-        /* Підзаголовок підіймається вгору і має нижчий z-index, заходячи під заголовок */
+        /* ПІДЗАГОЛОВОК, ЯКИЙ ЗАХОДИТЬ ПІД ЗАГОЛОВОК */
         .place .hero-subtitle {
-            position: relative;
-            top: -25px; 
-            margin-bottom: -10px;
-            z-index: 1;
+            position: relative !important;
+            z-index: 1 !important;  /* Знаходиться ЗА заголовком */
+            top: -35px !important;  /* Сильно піднімаємо вгору за заголовок */
+            margin: 0 !important;
+            color: #d93838;         /* Червоний колір для чіткої видимості */
+            opacity: 0.8;
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -146,7 +151,7 @@ UNO ідеально підходить як для сімейного відп�
 <li>Розвиває уважність і швидкість реакції</li>
 </ul>
 
-<p>Дізнатися більше про карткову гру UNO ви зможете переглянувши відео:</p>
+<p>Дізнатися більше про карткову гра UNO ви зможете переглянувши відео:</p>
 
 <video controls>
 <source src="video/UNO.mp4" type="video/mp4">

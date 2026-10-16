@@ -6,13 +6,28 @@
     <title>UNO - Види</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        /* Задаємо однакову фіксовану висоту для всіх рядків і комірок тіла таблиці (окрім заголовка) */
+        /* Фіксуємо таблицю, щоб вона тримала структуру */
+        .filling table {
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        /* Задаємо жорстку фіксовану висоту для всіх рядків тіла таблиці */
         .filling table tbody tr {
             height: 200px !important;
         }
+        
         .filling table tbody td {
             height: 200px !important;
             vertical-align: middle;
+            overflow: hidden; /* приховує те, що випадково вилазить за межі */
+        }
+
+        /* Обмежуємо картинки, щоб вони не ламали висоту рядка */
+        .filling table tbody td img {
+            max-height: 140px !important;
+            width: auto;
+            object-fit: contain;
         }
     </style>
 </head>

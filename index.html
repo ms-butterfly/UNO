@@ -23,26 +23,32 @@
         /* КОНТЕЙНЕР ДЛЯ НАКЛАДАННЯ */
         .place {
             position: relative;
-            margin-bottom: 30px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
         }
 
-        /* ЗАГОЛОВОК */
+        /* ГОЛОВНИЙ ЗАГОЛОВОК (Поринь у світ UNO...) */
         .place .sio {
             position: relative !important;
-            z-index: 2 !important; /* Переконуємося, що заголовок зверху */
-            margin: 0 !important;   /* Скидаємо стандартні відступи */
-            font-size: 2.5rem;
+            z-index: 2 !important; /* Знаходиться ШАРІВ ВИЩЕ */
+            margin: 0 !important;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #1e293b;
+            /* Якщо хочете, щоб заголовок перекривав підзаголовок непрозорим тлом, розкоментуйте рядок нижче: */
+            /* background-color: #ffffff; display: inline-block; padding: 0 10px; */
         }
 
-        /* ПІДЗАГОЛОВОК, ЯКИЙ ЗАХОДИТЬ ПІД ЗАГОЛОВОК */
+        /* ПІДЗАГОЛОВОК (Ознайомтесь з історією...) */
         .place .hero-subtitle {
             position: relative !important;
-            z-index: 1 !important;  /* Знаходиться ЗА заголовком */
-            top: -35px !important;  /* Сильно піднімаємо вгору за заголовок */
-            margin: 0 !important;
-            color: #d93838;         /* Червоний колір для чіткої видимості */
-            opacity: 0.8;
-            font-size: 1.2rem;
+            z-index: 1 !important;  /* Знаходиться ШАРІВ НИЖЧЕ (ЗА заголовком) */
+            margin-top: -35px !important; /* ВІД'ЄМНИЙ ВІДСТУП: заштовхує підзаголовок прямо під/за заголовок */
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e11d48; /* Яскраво-червоний колір для виразного ефекту накладання */
+            opacity: 0.85;  /* Невелика прозорість для ефекту шарів */
         }
     </style>
 </head>
@@ -53,7 +59,7 @@
     <img src="images/uno.png" alt="UNO" width="100%"/>
 </div>
 
- <div class="place">
+<div class="place">
     <h1 class="sio">Поринь у світ UNO разом з нами</h1>
     <p class="hero-subtitle">Ознайомтесь з історією, правилами та стратегіями гри!</p>
 </div>
@@ -73,7 +79,6 @@
     <li><a class="yellow" href="strategies.html">Стратегії</a></li>
     <li><a class="green" href="quiz.html">Тест</a></li>
 </ul>
-
 
 <h2 class="title">Про гру UNO</h2>
 

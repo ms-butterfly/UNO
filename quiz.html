@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <title>UNO - Тест</title>
     <link rel="stylesheet" href="css/main.css">
+    <style>
+    @media (max-width: 1300px) {
+        .menu { flex-wrap: nowrap; justify-content: center; }
+        .menu li { flex-shrink: 0; }
+        .menu a { white-space: nowrap; }
+        .menu li + li { margin-left: -35px; }
+    }
+</style>
 </head>
 
 <body>
@@ -41,7 +49,7 @@
             <form action="#" method="post">
 
                 <h3>Реєстрація:</h3>
-                <p>Ваше ім’я та прізвище: <input type="text" name="fullname" placeholder="Введіть ваш email" required></p>
+                <p>Ваше ім’я та прізвище: <input type="text" name="fullname" placeholder="Введіть ваше ім’я та прізвище" required></p>
 
                 <h3>Питання:</h3>
                 <div class="questions-columns">
@@ -58,8 +66,7 @@
 
                         <p><strong>Питання 3</strong><br>У якій країні була створена гра UNO?</p>
                         <input type="radio" name="q3" value="usa"> США<br>
-                        <!-- ПОМИЛКА: Варіант відповіді зміщений праворуч відносно інших -->
-                        <span style="margin-left: 30px;"><input type="radio" name="q3" value="france"> Франція</span><br>
+                        <input type="radio" name="q3" value="france"> Франція<br>
                         <input type="radio" name="q3" value="germany"> Німеччина<br>
 
                         <p><strong>Питання 4</strong><br>Хто створив гру UNO?</p>
@@ -84,7 +91,7 @@
 
                         <p><strong>Питання 8</strong><br>Яка карта змінює напрямок гри?</p>
                         <input type="radio" name="q8" value="skip"> Пропуск ходу<br>
-                        <span style="margin-left: 30px;"><input type="radio" name="q8" value="reverse"> Зміна напрямку</span><br>
+                        <input type="radio" name="q8" value="reverse"> Зміна напрямку<br>
                         <input type="radio" name="q8" value="plus2"> +2<br>
 
                         <p><strong>Питання 9</strong><br>Скільки перших колод було надруковано Роббінсом?</p>

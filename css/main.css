@@ -120,3 +120,7 @@ margin: 0px 10px 10px 10px;
 display: block;
 margin: 20px auto;
 }
+
+.menu a {
+    cursor: default;
+}
